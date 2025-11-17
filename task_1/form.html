@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Form to Table (Edit / Delete)</title>
+  <link rel="stylesheet" href="form.css" />
+</head>
+<body>
+  <div class="container">
+    <form id="credentials" class="details" autocomplete="off">
+      <h1>FORM</h1>
+      <div class="field">
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" placeholder="Enter your name" />
+      </div>
+      <div class="field">
+        <label for="age">Age</label>
+        <input type="text" id="age" name="age" placeholder="Enter your age" />
+      </div>
+      <div class="field">
+        <label for="mail">MailID</label>
+        <input type="email" id="mail" name="mail" placeholder="Enter your mailID" />
+      </div>
+      <div class="actions">
+        <button type="submit" id="submit">SUBMIT</button>
+        <button type="button" id="cancel" class="hidden">CANCEL</button>
+      </div>
+    </form>
+    <section class="tables">
+      <h2>Submitted Data</h2>
+      <table id="Table">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Age</th>
+            <th>MailID</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody id="tabled"></tbody>
+      </table>
+    </section>
+  </div>
+  <script src="form.js"></script>
+</body>
+</html>
