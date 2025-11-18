@@ -1,62 +1,140 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Ocean Academy</title>
-    <link rel="stylesheet" href="./index.css" />
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Ocean Academy</title>
+  <link rel="stylesheet" href="./index.css" />
 </head>
 <body>
-    <header>
-        <nav class="navbar">
-            <div class="nav-left">
-                <a class="brand" href="/">
-                    <img src="https://oceanacademy.in/_next/static/media/ocean_logo.82d83b81.svg" alt="">
-                </a>
+  <header>
+    <nav class="navbar">
+      <div class="nav-inner">
+        <div class="nav-left">
+          <a class="brand" href="/">
+            <img src="https://oceanacademy.in/_next/static/media/ocean_logo.82d83b81.svg" alt="ocean logo">
+          </a>
+        </div>
+
+        <button id="nav-toggle" class="nav-toggle" aria-label="Toggle navigation">
+          <span class="hamburger"></span>
+        </button>
+
+        <div id="nav-menu" class="nav-menu">
+          <ul class="nav-list">
+            <li class="nav-item"><a href="#">Home</a></li>
+            <li class="nav-item"><a href="#">About us</a></li>
+            <li class="nav-item dropdown">
+              <button class="drop-toggle" aria-expanded="false">
+                Services
+                <svg class="chev" width="12" height="8" viewBox="0 0 12 8" aria-hidden="true">
+                  <path d="M1 1l5 5 5-5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </button>
+              <ul class="dropdown-menu">
+                <li><a href="#">Our Services</a></li>
+                <li><a href="#">Job Portal</a></li>
+                <li><a href="#">Placement</a></li>
+                <li><a href="#">Editor</a></li>
+              </ul>
+            </li>
+            <li class="nav-item"><a href="#">Gallery</a></li>
+            <li class="nav-item"><a href="#">Courses</a></li>
+            <li class="nav-item"><a href="#">Contact Us</a></li>
+          </ul>
+
+          <div class="nav-actions">
+            <a href="#" class="login">Login</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="wrap">
+        <div class="left">
+          <h1 class="title">Transforming Careers with Future-Ready Skills</h1>
+          <p class="desc">Upgrade your career with industry-recognized online and offline courses in Puducherry. Learn from expert mentors, build real-world projects, and land your dream job in IT and software development.</p>
+
+          <div class="stats-simple" aria-hidden="false">
+            <div class="stat-item">
+              <img src="https://oceanacademy.in/_next/static/media/studentCount.6f07a093.png" alt="">
+              <div class="stat-text">
+                <div class="stat-bottom">10000+ Students</div>
+              </div>
             </div>
 
-            <button id="nav-toggle" class="nav-toggle">
-                <span class="hamburger"></span>
-            </button>
-
-            <div id="nav-menu" class="nav-menu">
-                <ul class="nav-list">
-                    <li class="nav-item"><a href="#">Home</a></li>
-                    <li class="nav-item"><a href="#">About us</a></li>
-                    <li class="nav-item dropdown">
-                        <button class="drop-toggle">
-                            Services
-                            <svg class="chev" width="12" height="8" viewBox="0 0 12 8" aria-hidden="true">
-                                <path d="M1 1l5 5 5-5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                            </svg>
-                        </button>
-                        <ul class="dropdown-menu">
-                            <li><a href="#">Our Services</a></li>
-                            <li><a href="#">Job Portal</a></li>
-                            <li><a href="#">Placement</a></li>
-                            <li><a href="#">Editor</a></li>
-                        </ul>
-                    </li>
-                    <li class="nav-item"><a href="#">Gallery</a></li>
-                    <li class="nav-item"><a href="#">Courses</a></li>
-                    <li class="nav-item"><a href="#">Contact Us</a></li>
-                </ul>
-
-                <div class="nav-actions">
-                    <a href="#" class="login">Login</a>
-                </div>
+            <div class="stat-item">
+              <img src="https://oceanacademy.in/_next/static/media/seminars.ae808473.png" alt="">
+              <div class="stat-text">
+                <div class="stat-bottom">75+ Free seminars</div>
+              </div>
             </div>
-        </nav>
-    </header>
-    <main>
-        <section>
-            <div class="left-text">
-                <h2>Transforming Careers with Future-Ready Skills</h2>
-                <div class="para">
-                    <p>Upgrade your career with industry-recognized online and offline courses in Puducherry. Learn from expert mentors, build real-world projects, and land your dream job in IT and software development.</p>
+
+            <div class="stat-item">
+              <img src="https://oceanacademy.in/_next/static/media/workshops.2b33f211.svg" alt="">
+              <div class="stat-text">
+                <div class="stat-bottom">6 International Workshop</div>
+              </div>
+            </div>
+
+            <div class="stat-item">
+              <img src="https://oceanacademy.in/_next/static/media/careerGuidance.c5e99dae.svg" alt="">
+              <div class="stat-text">
+                <div class="stat-bottom">Career guidance</div>
+              </div>
+            </div>
+          </div>
+
+          <a class="cta" href="#">Enroll Now</a>
+        </div>
+
+        <div class="right">
+          <div class="card">
+            <div class="media-single">
+              <img src="img.jpeg" alt="hero image">
+            </div>
+
+            <div class="stats-row">
+              <div class="stat-card">
+                <img src="https://oceanacademy.in/_next/static/media/icon.c65e5333.svg" alt="">
+                <div class="stat-copy">
+                  <div class="stat-num">10k+</div>
+                  <div class="stat-label">Students</div>
                 </div>
-                
-    </main>
-    <script src="./script.js"></script>
+              </div>
+
+              <div class="stat-card">
+                <img src="https://oceanacademy.in/_next/static/media/icon.c65e5333.svg" alt="">
+                <div class="stat-copy">
+                  <div class="stat-num">75+</div>
+                  <div class="stat-label">Free <br>seminars</div>
+                </div>
+              </div>
+
+              <div class="stat-card">
+                <img src="https://oceanacademy.in/_next/static/media/icon.c65e5333.svg" alt="">
+                <div class="stat-copy">
+                  <div class="stat-num">6</div>
+                  <div class="stat-label">International<br>Workshop</div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="best">
+        <div class="">
+            <h1 class="head">Why We're the Best Choice</h1>
+            <p>Join thousands of successful professionals who choose Ocean Academy to transform their careers. Here's why we stand out from the competition.</p>
+        </div>
+    </section>
+  </main>
+
+  <script src="./script.js"></script>
 </body>
 </html>
