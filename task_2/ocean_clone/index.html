@@ -1,4 +1,4 @@
-<!-- index.html -->
+
 <!doctype html>
 <html lang="en">
 <head>
@@ -6,6 +6,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Ocean Academy</title>
   <link rel="stylesheet" href="./index.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
 </head>
 <body>
   <header>
@@ -73,7 +75,7 @@
           <li><a href="#">Gallery</a></li>
           <li><a href="#">Courses</a></li>
           <li><a href="#">Contact Us</a></li>
-          <li><a href="#" >Login</a></li>
+          <li><a href="#">Login</a></li>
         </ul>
       </div>
     </nav>
@@ -138,7 +140,7 @@
                 <img src="https://oceanacademy.in/_next/static/media/icon.c65e5333.svg" alt="">
                 <div class="stat-copy">
                   <div class="stat-num">75+</div>
-                  <div class="stat-label">Free seminars</div>
+                  <div class="stat-label">Free <br>seminars</div>
                 </div>
               </div>
 
@@ -146,7 +148,7 @@
                 <img src="https://oceanacademy.in/_next/static/media/icon.c65e5333.svg" alt="">
                 <div class="stat-copy">
                   <div class="stat-num">6</div>
-                  <div class="stat-label">International Workshop</div>
+                  <div class="stat-label">International <br>Workshop</div>
                 </div>
               </div>
             </div>
@@ -219,26 +221,34 @@
           <div class="more-grid">
             <article class="more-card">
               <div class="mc-icon"><img src="https://oceanacademy.in/_next/static/media/time_svgrepo.com%20-%20Copy.cee8a2ce.png" alt=""></div>
-              <h3>Lifetime access</h3>
-              <p>Learn at your own pace</p>
+              <div class="mc-content">
+                <h3>Lifetime access</h3>
+                <p>Learn at your own pace</p>
+              </div>
             </article>
 
             <article class="more-card">
               <div class="mc-icon"><img src="https://oceanacademy.in/_next/static/media/certificate.6654bb22.png" alt=""></div>
-              <h3>Certificate</h3>
-              <p>Industry recognized</p>
+              <div class="mc-content">
+                <h3>Certificate</h3>
+                <p>Industry recognized</p>
+              </div>
             </article>
 
             <article class="more-card">
               <div class="mc-icon"><img src="https://oceanacademy.in/_next/static/media/community.dd100ac8.png" alt=""></div>
-              <h3>Community</h3>
-              <p>3K+ active learners</p>
+              <div class="mc-content">
+                <h3>Community</h3>
+                <p>3K+ active learners</p>
+              </div>
             </article>
 
             <article class="more-card">
               <div class="mc-icon"><img src="https://oceanacademy.in/_next/static/media/project.1fa348e5.png" alt=""></div>
-              <h3>Project portfolio</h3>
-              <p>Build real projects</p>
+              <div class="mc-content">
+                <h3>Project portfolio</h3>
+                <p>Build real projects</p>
+              </div>
             </article>
           </div>
 
@@ -249,6 +259,63 @@
         </div>
       </div>
     </section>
+
+<section class="courses-section">
+    <div class="courses-inner">
+      <div class="courses-head">
+        <h2>Explore Our Courses</h2>
+        <a class="btn-view" href="#">View More</a>
+      </div>
+
+      <div class="course-filters" role="tablist" aria-label="course categories">
+        <button class="course-pill active" type="button" data-key="All">All</button>
+        <button class="course-pill" type="button" data-key="Most popular">Most popular</button>
+        <button class="course-pill" type="button" data-key="Fullstack">Fullstack</button>
+        <button class="course-pill" type="button" data-key="Frontend">Frontend</button>
+        <button class="course-pill" type="button" data-key="Designing">Designing</button>
+        <button class="course-pill" type="button" data-key="Programming Foundation">Programming Foundation</button>
+        <button class="course-pill" type="button" data-key="Data, AI & Cloud">Data, AI &amp; Cloud</button>
+        <button class="course-pill" type="button" data-key="Testing & Automation">Testing &amp; Automation</button>
+        <button class="course-pill" type="button" data-key="App Development">App Development</button>
+      </div>
+
+      <div class="mobile-controls">
+        <button class="filters-toggle" aria-expanded="false" aria-controls="mobile-dropdown">
+          <span class="toggle-label">All</span>
+          <span class="chev">▾</span>
+        </button>
+
+        <div id="mobile-dropdown" class="mobile-dropdown" aria-hidden="true">
+          <div class="mobile-list" role="menu" aria-label="mobile category list">
+            <button class="mobile-item active" role="menuitem" data-key="All" type="button">All</button>
+            <button class="mobile-item" role="menuitem" data-key="Most popular" type="button">Most popular</button>
+            <button class="mobile-item" role="menuitem" data-key="Fullstack" type="button">Fullstack</button>
+            <button class="mobile-item" role="menuitem" data-key="Frontend" type="button">Frontend</button>
+            <button class="mobile-item" role="menuitem" data-key="Designing" type="button">Designing</button>
+            <button class="mobile-item" role="menuitem" data-key="Programming Foundation" type="button">Programming Foundation</button>
+            <button class="mobile-item" role="menuitem" data-key="Data, AI & Cloud" type="button">Data, AI & Cloud</button>
+            <button class="mobile-item" role="menuitem" data-key="Testing & Automation" type="button">Testing & Automation</button>
+            <button class="mobile-item" role="menuitem" data-key="App Development" type="button">App Development</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- keep your existing section header & pills; replace or add this carousel container inside .courses-inner -->
+<div class="courses-carousel-wrap">
+  <div class="courses-carousel" aria-live="polite">
+    <div class="cards-track"></div>
+  </div>
+
+  <!-- center bottom arrows like the screenshot -->
+  <div class="carousel-controls" aria-hidden="false">
+    <button class="ctrl prev" aria-label="Previous"><span>‹</span></button>
+    <button class="ctrl next" aria-label="Next"><span>›</span></button>
+  </div>
+</div>
+
+    </div>
+  </section>
+
   </main>
 
   <script src="./script.js"></script>
