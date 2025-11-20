@@ -1,0 +1,59 @@
+.company-section {
+    padding: 40px 0;
+    text-align: center;
+    background: #ffffff;
+}
+
+.company-title {
+    color:#1595cf; font-size:30px; margin:0 0 8px; font-weight:500;
+}
+
+.company-subtitle {
+    /* font-size: 18px; */
+    width: 70%;
+    margin: 10px auto 40px;
+    /* color: #444; */
+    font-family: 'Poppins';
+    color:#6b6b6b; font-size:18px;
+}
+
+.company-slider {
+    width: 80%;            
+    margin: auto;
+    overflow: hidden;
+    padding: 5px 0;
+}
+
+/* Each row */
+.company-row {
+    display: flex;
+    align-items: center;
+    gap: 80px;
+    animation: slideLeft 22s linear infinite;
+    margin: 30px 0;
+}
+
+.company-row.reverse {
+    animation: slideRight 22s linear infinite;
+}
+
+.company-row img {
+    width: 200px;          /* FIXED WIDTH - all same size */
+    height: 130px;          /* FIXED HEIGHT - all same size */
+    object-fit: contain;   /* keeps original proportions */
+    padding: 10px;         /* adds breathing space */
+    filter: brightness(1);
+    transition: .3s;
+}
+
+/* Left Animation */
+@keyframes slideLeft {
+    from { transform: translateX(0); }
+    to   { transform: translateX(-50%); }
+}
+
+/* Right Animation */
+@keyframes slideRight {
+    from { transform: translateX(-50%); }
+    to   { transform: translateX(0); }
+}

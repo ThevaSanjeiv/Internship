@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+:root{
+  --bg:#edf7fb;
+  --accent:#0a9edd;
+  --muted:#5b6b73;
+  --card-bg:#ffffff;
+  --max-width:1180px;
+}
+
+*{box-sizing:border-box;font-family:'Poppins',system-ui,-apple-system,Segoe UI,Roboto,'Helvetica Neue',Arial;margin:0;padding:0}
+
+.awards-section{
+  background:var(--bg);
+  padding:70px 20px 80px;
+}
+
+.container{
+  max-width:var(--max-width);
+  margin:0 auto;
+  text-align:center;
+}
+
+.titles{
+  color:var(--accent);
+  font-size:30px;
+  font-weight:600;
+  letter-spacing:0.2px;
+  margin-bottom:18px;
+}
+
+.subtitle{
+  color:var(--muted);
+  font-size:20px;
+  max-width:980px;
+  margin:0 auto 48px;
+  line-height:1.5;
+  font-weight:400;
+}
+
+.recognitions{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:0px;
+  align-items:start;
+  justify-content: space-around;
+  padding:0 12px;
+}
+
+.rec-card{
+  background:transparent;
+  text-align:center;
+  padding-top:6px;
+}
+
+.rec-label{
+  color:var(--muted);
+  font-size:16px;
+  margin-bottom:18px;
+}
+
+.rec-image{
+  width:100%;
+  max-width:400px;
+  height:280px;
+  display:block;
+  
+  margin:0 auto;
+  border-radius:18px;
+  box-shadow:0 18px 40px rgba(10,34,50,0.06);
+  object-fit:cover;
+}
+
+
+
+.rec-desc{
+  color:var(--muted);
+  max-width:520px;
+  margin:12px auto 0;
+  font-size:16px;
+  line-height:1.5;
+}
+
+/* responsive rules */
+@media (max-width:1100px){
+  .titles{font-size:36px}
+  .subtitle{font-size:18px}
+  .recognitions{gap:12px}
+  .rec-image{max-width:280px}
+}
+
+@media (max-width:860px){
+  .recognitions{grid-template-columns:1fr; gap:28px}
+  .container{padding:0 16px}
+  .titles{font-size:32px}
+  .subtitle{font-size:17px}
+  .rec-image{max-width:350px}
+}
+
+@media (max-width:420px){
+  .titles{font-size:26px}
+  .subtitle{font-size:15px}
+  .rec-name{font-size:18px}
+  .rec-desc{font-size:14px}
+  .rec-image{border-radius:14px}
+}
