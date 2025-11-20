@@ -1,3 +1,4 @@
+/* ===== responsive company logos slider ===== */
 .company-section {
     padding: 40px 0;
     text-align: center;
@@ -5,55 +6,114 @@
 }
 
 .company-title {
-    color:#1595cf; font-size:30px; margin:0 0 8px; font-weight:500;
+    color: #1595cf;
+    font-size: 30px;
+    margin: 0 0 8px;
+    font-weight: 500;
 }
 
 .company-subtitle {
-    /* font-size: 18px; */
     width: 70%;
     margin: 10px auto 40px;
-    /* color: #444; */
-    font-family: 'Poppins';
-    color:#6b6b6b; font-size:18px;
+    font-family: 'Poppins', sans-serif;
+    color: #6b6b6b;
+    font-size: 18px;
 }
 
+/* slider wrapper */
 .company-slider {
-    width: 80%;            
+    width: 80%;
+    max-width: 1200px;
     margin: auto;
-    overflow: hidden;
+    overflow: hidden;       /* hide overflow to prevent horizontal scroll */
     padding: 5px 0;
 }
 
-/* Each row */
+/* each animated row */
 .company-row {
     display: flex;
     align-items: center;
-    gap: 80px;
+    gap: 50px;
+    /* continuous scroll using duplicated items — duration tuned via media queries */
     animation: slideLeft 22s linear infinite;
-    margin: 30px 0;
+    margin: 20px 0;
+    flex-wrap: nowrap;      /* keep single line */
+    will-change: transform;
 }
 
+/* reverse row scroll (opposite direction) */
 .company-row.reverse {
     animation: slideRight 22s linear infinite;
 }
 
+/* logo sizing — responsive using clamp */
 .company-row img {
-    width: 200px;          /* FIXED WIDTH - all same size */
-    height: 130px;          /* FIXED HEIGHT - all same size */
-    object-fit: contain;   /* keeps original proportions */
-    padding: 10px;         /* adds breathing space */
+    width: clamp(90px, 12vw, 200px);   /* responsive width between 90px and 200px */
+    height: clamp(80px, 8vw, 130px);   /* responsive height */
+    object-fit: contain;               /* maintain aspect ratio */
+    padding: 10px;
     filter: brightness(1);
-    transition: .3s;
+    transition: transform .25s ease, filter .25s ease;
+    flex: 0 0 auto;                    /* prevent logos from shrinking into multiple lines */
 }
 
-/* Left Animation */
+/* small hover interaction */
+.company-row img:hover,
+.company-row img:focus {
+    transform: scale(1.04);
+    filter: brightness(1.05);
+}
+
+/* pause animation on hover or keyboard focus for accessibility */
+
+/* Keyframes for left and right scrolling */
+/* slideLeft: moves the row from 0 -> -50% (works when content is duplicated) */
 @keyframes slideLeft {
     from { transform: translateX(0); }
     to   { transform: translateX(-50%); }
 }
 
-/* Right Animation */
+/* slideRight: reverse direction */
 @keyframes slideRight {
     from { transform: translateX(-50%); }
     to   { transform: translateX(0); }
+}
+
+/* ===== responsive adjustments ===== */
+@media (max-width: 1100px) {
+    .company-subtitle { width: 80%; font-size: 16.5px; }
+    .company-slider { width: 90%; }
+    .company-row { gap: 36px; animation-duration: 20s; }
+    .company-row img { width: clamp(80px, 14vw, 170px); height: clamp(50px, 10vw, 110px); }
+}
+
+@media (max-width: 768px) {
+    .company-subtitle { width: 90%; font-size: 15px; margin-bottom: 30px; }
+    .company-slider { width: 95%; }
+    .company-row { gap: 24px; animation-duration: 18s; margin: 14px 0; }
+    .company-row img { width: clamp(72px, 18vw, 150px); height: clamp(48px, 12vw, 95px); padding: 6px; }
+    .company-title { font-size: 24px; }
+}
+
+/* extra-small screens (phones) */
+@media (max-width: 420px) {
+    .company-subtitle { font-size: 14px; margin-bottom: 22px; }
+    .company-row { gap: 16px; animation-duration: 14s; }
+    .company-row img { width: clamp(64px, 20vw, 120px); height: clamp(40px, 14vw, 80px); padding: 4px; }
+    .company-title { font-size: 20px; }
+}
+
+/* Respect user preference for reduced motion */
+@media (prefers-reduced-motion: reduce) {
+    .company-row,
+    .company-row.reverse {
+        animation: none;
+    }
+}
+
+/* Optional: prevent accidental page horizontal scroll for some layout edge cases */
+html, body {
+    /* don't set overflow-x hidden globally if you rely on it elsewhere.
+       Only uncomment if you still see horizontal scroll in your page layout. */
+    /* overflow-x: hidden; */
 }
