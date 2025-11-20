@@ -46,18 +46,17 @@ html, body {
 .login{
   border: 2px solid var(--accent);
   background-color: var(--accent);
-  color:white;
 }
-.brand img{height:30px;display:block;transition:height .15s ease}
+.brand img{height:25px;display:block;transition:height .15s ease}
 .nav-left{display:flex;align-items:center;gap:12px}
 .nav-center{flex:1;display:flex;justify-content:center}
 .nav-right{display:flex;align-items:center;margin-left:auto;gap:8px}
 .nav-menu{display:flex;align-items:right;justify-content:right;gap:24px}
-.nav-list{display:flex;gap:34px;list-style:none;align-items:center}
+.nav-list{display:flex;gap:30px;list-style:none;align-items:center}
 .nav-list a,.drop-toggle{
   text-decoration:none;
-  color:#222;
-  font-size:14px;
+  color:#454545;
+  font-size:18px;
   font-family: Poppins;
   padding:6px 4px;
   background:none;
@@ -70,7 +69,7 @@ html, body {
 }
 .nav-list a.login:hover{background-color: white;color: var(--accent);transition: 0.3s ease;}
 .nav-list a:hover,.drop-toggle:hover{color:var(--accent);transition:color .18s ease}
-.nav-list a.login{background-color: var(--accent);border:2px solid var(--accent);color:white#222;font-weight:500;text-decoration:none;padding:8px 26px;border-radius:12px}
+.nav-list a.login{background-color: var(--accent);border:2px solid var(--accent);color:white;font-weight:500;text-decoration:none;padding:6px 35px;border-radius:12px}
 .dropdown{position:relative}
 .chev{margin-left:6px;vertical-align:middle;opacity:.9;transition:transform .18s ease;display:inline-block}
 .drop-toggle{background:none;border:0;padding:6px 10px;display:flex;align-items:center;gap:8px;justify-content:center}
