@@ -31,6 +31,7 @@ html, body {
   z-index:var(--nav-z);
   display:flex;
   align-items:center;
+  justify-content: space-between;
   transition:box-shadow .18s ease,backdrop-filter .18s ease,background-color .18s ease;
 }
 .nav-inner{
@@ -40,7 +41,7 @@ html, body {
   display:flex;
   align-items:center;
   justify-content:space-between;
-  padding:0 20px;
+  padding:0 5px;
   height:100%;
 }
 .login{
@@ -150,7 +151,12 @@ html, body {
   line-height:1.7;
   text-align:justify;
 }
-.cta{display:inline-block;padding:12px 24px;border-radius:12px;background:#fff;color:var(--card);font-weight:700;font-size:16px;text-decoration:none}
+.cta{display:inline-block;padding:12px 28px;border-radius:12px;background:#fff;color:var(--accent);font-weight:700;font-size:16px;text-decoration:none}
+.cta:hover{
+  background:rgb(8, 173, 238);
+  color:#fff;
+  transition: .3s ease;
+}
 .right{position:relative;display:flex;align-items:center;justify-content:center;min-height:0}
 .card{width:100%;max-width:760px;border-radius:18px;background:transparent;overflow:visible;padding:0;display:flex;align-items:center;justify-content:center;flex-direction:column}
 .media-single{width:100%;border-radius:12px;overflow:hidden;display:block;position:relative}
@@ -600,9 +606,24 @@ html, body {
 
 @media(min-width:851px) and (max-width:1050px){
   .navbar{height:auto;padding-top:10px;padding-bottom:12px}
-  .nav-inner{flex-direction:column;gap:8px;padding:8px 20px;height:auto}
+  .nav-inner{flex-direction:column;gap:8px;padding:6px 15px;height:auto}
   .nav-left{justify-content:center;width:100%}
-  .nav-center{justify-content:center;width:100%;margin-bottom:20px}
+  .nav-center{justify-content:center;width:100%;margin-bottom:20px;}
+  .nav-list a,.drop-toggle{
+  text-decoration:none;
+  color:#454545;
+  font-size:16px;
+  font-family: Poppins;
+  padding:4px 8px;
+  background:none;
+  border:none;
+  cursor:pointer;
+  font-weight:500;
+  display:flex;
+  align-items:center;
+  gap:12px;
+}
+  
   .nav-right{display:none}
   body{padding-top:140px}
 }
@@ -622,6 +643,7 @@ html, body {
   body{padding-top:var(--nav-height)}
   .nav-center{display:none}
   .nav-toggle{display:block}
+  
   .nav-right{order:3}
   .nav-left{order:1}
   .drawer{display:block}

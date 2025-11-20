@@ -86,7 +86,7 @@
   .titles{font-size:36px}
   .subtitle{font-size:18px}
   .recognitions{gap:12px}
-  .rec-image{max-width:280px}
+  .rec-image{max-width:80px}
 }
 
 @media (max-width:860px){
@@ -94,7 +94,7 @@
   .container{padding:0 16px}
   .titles{font-size:32px}
   .subtitle{font-size:17px}
-  .rec-image{max-width:350px}
+  .rec-image{max-width:760px}
 }
 
 @media (max-width:420px){
