@@ -320,15 +320,15 @@ const COURSES = [
   }
 ];
 
-/* ---------- Render & Carousel logic ---------- */
+
 const track = document.querySelector('.cards-track');
 const prevBtn = document.querySelector('.carousel-controls .prev');
 const nextBtn = document.querySelector('.carousel-controls .next');
 
 let filteredCourses = COURSES.slice();
-let currentIndex = 0;    // index of left-most visible card page
-let cardsPerPage = 3;    // will compute on resize
-let gap = 28;            // must align with CSS .cards-track gap
+let currentIndex = 0;    
+let cardsPerPage = 3;   
+let gap = 28;            
 
 function createCard(course) {
   const c = document.createElement('article');
