@@ -48,9 +48,7 @@
     animation: slideRight 22s linear infinite;
 }
 
-/* ================================ */
-/*      LOGO SIZE (DESKTOP FIRST)  */
-/* ================================ */
+
 
 .company-row img {
     width: clamp(140px, 6vw, 260px); /* bigger desktop size */
@@ -81,16 +79,7 @@
     to   { transform: translateX(0); }
 }
 
-/* Pause on hover */
-.company-row:hover {
-    animation-play-state: paused;
-}
 
-/* ================================ */
-/*       RESPONSIVE BREAKPOINTS    */
-/* ================================ */
-
-/* Very large screens (1600px+) */
 @media (min-width:1600px) {
     .company-row img {
         width: clamp(180px, 5vw, 300px);

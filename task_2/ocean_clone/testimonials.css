@@ -9,14 +9,41 @@
   --col-height:520px;
 }
 
-/* Basic section */
-.testimonials-section { background:var(--bg); padding:60px 10px; font-family:"Poppins",system-ui,Arial; }
-.container{ max-width:var(--page-max); margin:0 auto; padding:0 18px; }
-.ts-header{ margin-bottom:22px; display:flex; flex-direction:column; gap:6px; }
-.ts-title{ font-size:32px; color:var(--accent); margin:0; font-weight:700; }
-.ts-subtitle{ margin:0; color:var(--muted); font-size:15px; }
+.testimonials-section {
+  background:var(--bg);
+  padding:60px 10px;
+  font-family:"Poppins",system-ui,Arial;
+}
 
-/* Grid layout */
+.container{
+  max-width:var(--page-max);
+  margin:0 auto;
+  padding:0 18px;
+}
+
+.ts-header{
+  margin-bottom:22px;
+  display:flex;
+  flex-direction:column;
+  gap:6px;
+}
+
+.ts-title{
+  font-size:32px;
+  color:var(--accent);
+  margin:0;
+  font-weight:700;
+}
+
+.ts-subtitle{
+  margin:0;
+  color:var(--muted);
+  font-size:15px;
+}
+
+/* --------------------------- */
+/* DEFAULT (DESKTOP) → 3 COLUMNS */
+/* --------------------------- */
 .testimonials-grid{
   display:grid;
   grid-template-columns:repeat(3,minmax(0,1fr));
@@ -24,7 +51,6 @@
   align-items:start;
 }
 
-/* Column viewport — overflow hidden (we animate inner via transform) */
 .ts-column{
   height:var(--col-height);
   overflow:hidden;
@@ -35,7 +61,6 @@
   position:relative;
 }
 
-/* Inner content that will be transformed by JS */
 .ts-inner{
   display:flex;
   flex-direction:column;
@@ -43,10 +68,16 @@
   will-change:transform;
 }
 
-/* Card */
 .ts-card{
-  display:flex;
-  gap:12px;
+  display:grid;
+  grid-template-columns:auto 1fr;
+  grid-template-areas:
+    "img name"
+    "img course"
+    "para para"
+    "stars stars";
+  column-gap:12px;
+  row-gap:4px;
   align-items:flex-start;
   background:var(--card-bg);
   border-radius:12px;
@@ -54,10 +85,14 @@
   box-shadow:0 8px 18px rgba(18,35,50,0.04);
   transition:transform .16s ease, box-shadow .16s ease;
   min-height:160px;
+  width:100%;
 }
-.ts-card:hover{ transform:translateY(-6px); box-shadow:0 20px 40px rgba(18,35,50,0.08); }
 
-/* Avatar */
+.ts-card:hover{
+  transform:translateY(-6px);
+  box-shadow:0 20px 40px rgba(18,35,50,0.08);
+}
+
 .ts-img{
   width:56px;
   height:56px;
@@ -66,63 +101,79 @@
   border:3px solid #fff;
   box-shadow:0 6px 12px rgba(0,0,0,0.06);
   flex-shrink:0;
+  grid-area:img;
 }
 
-/* Ensure the content column is left-aligned */
-.ts-card > div {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start; /* left alignment for everything inside */
-  width: 100%;
+.ts-card > div{
+  display:contents;
 }
 
-/* Name (left aligned) */
 .ts-card h3{
   margin:0;
   font-size:18px;
   font-weight:700;
   color:#1d2630;
-  text-align: left;
+  text-align:left;
+  grid-area:name;
+  align-self:end;
 }
 
-/* Course (left aligned) */
 .ts-course{
   font-size:13px;
   color:#8b96a2;
-  margin:6px 0;
-  text-align: left;
+  margin:6px 0 0 0;
+  text-align:left;
+  grid-area:course;
 }
 
-/* Paragraph: justified */
 .ts-text{
-  margin:0;
+  margin-top:10px;
+  margin-bottom:0;
   font-size:14px;
   color:#35404b;
   line-height:1.6;
   display:-webkit-box;
   -webkit-box-orient:vertical;
-  -webkit-line-clamp:6;
+  -webkit-line-clamp:20;
   overflow:hidden;
-  text-align: justify; /* <-- justified paragraph */
-  -moz-text-align-last: left;
-  text-align-last: left;
+  text-align:left;
+  grid-area:para;
 }
 
-/* Stars left aligned */
 .ts-stars{
   color:#f6c13d;
   margin-top:8px;
   font-size:16px;
-  text-align: left;
-  align-self: flex-start; /* make sure stars sit at left of content column */
+  text-align:left;
+  align-self:flex-start;
+  grid-area:stars;
 }
 
-/* Responsive */
+/* -------------------------------- */
+/* FROM 1100px TO 550px → 2 COLUMNS */
+/* -------------------------------- */
 @media (max-width:1100px){
-  .testimonials-grid{ grid-template-columns:repeat(2,minmax(1fr)); }
+  .testimonials-grid{
+    grid-template-columns:repeat(2,minmax(0,1fr)); /* 2 columns */
+  }
+  :root{
+    --col-height:480px; /* equal height so both columns end same line */
+  }
 }
-@media (max-width:720px){
-  .testimonials-grid{ grid-template-columns:1fr; }
-  :root{ --col-height:420px; }
-  .ts-title{ font-size:26px; }
+
+/* ------------------------------- */
+/* BELOW 550px → 1 COLUMN LAYOUT   */
+/* ------------------------------- */
+@media (max-width:550px){
+  .testimonials-grid{
+    grid-template-columns:1fr;
+  }
+
+  :root{
+    --col-height:420px;
+  }
+
+  .ts-title{
+    font-size:26px;
+  }
 }

@@ -1,0 +1,270 @@
+.ocean-community {
+  padding: 80px 150px 70px;
+  background-color: #ffffff;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  text-align: center;
+}
+
+.gc-container {
+  max-width: 1180px;
+  margin: 0 auto;
+}
+
+.gc-header {
+  max-width: 720px;
+  margin: 0 auto 32px;
+}
+
+.gc-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 20px;
+  border-radius: 999px;
+  background-color: #ffffff;
+  box-shadow: 0 18px 45px rgba(15, 35, 52, 0.12);
+}
+
+.gc-badge-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  border-radius: 999px;
+  background: rgba(14, 144, 207, 0.08);
+  color: #0e90cf;
+}
+
+.gc-badge-text {
+  font-size: 15px;
+  font-weight: 600;
+  color: #0e90cf;
+}
+
+.gc-title {
+  margin-top: 24px;
+  font-size: 24px;
+  line-height: 1.35;
+  font-weight: 600;
+  color: #111827;
+}
+
+.gc-title span {
+  color: #0e90cf;
+}
+
+.gc-subtitle {
+  margin-top: 10px;
+  font-size: 14px;
+  line-height: 1.6;
+  color: #6b7280;
+}
+
+@media (min-width: 640px) {
+  .gc-title {
+    font-size: 26px;
+  }
+
+  .gc-subtitle {
+    font-size: 15px;
+  }
+}
+
+.gc-feature-grid {
+  margin-top: 32px;
+  display: grid;
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+  gap: 24px;
+}
+
+@media (min-width: 768px) {
+  .gc-feature-grid {
+    margin-top: 40px;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 0;
+  }
+}
+
+.gc-feature {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px 6px;
+}
+
+.gc-feature-icon {
+  width: 90px;
+  height: 90px;
+  border-radius: 18px;
+  background-color: #ffffff;
+  box-shadow: 0 14px 40px rgba(15, 35, 52, 0.12);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
+  color: #0e90cf;
+}
+
+.gc-feature-icon svg {
+  width: 26px;
+  height: 26px;
+}
+
+.gc-feature:hover .gc-feature-icon {
+  box-shadow: 0 18px 50px rgba(15, 35, 52, 0.18);
+  transform: translateY(-2px);
+}
+
+.gc-feature-title {
+  margin-top: 14px;
+  font-size: 17px;
+  font-weight: 600;
+  color: #111827;
+}
+
+.gc-feature-text {
+  margin-top: 6px;
+  font-size: 14px;
+  color: #6b7280;
+}
+
+/* Social cards */
+
+.gc-social-grid {
+  margin-top: 36px;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr)); /* always 2 columns on mobile */
+  gap: 18px;
+  justify-items: center;
+}
+
+/* keep 2 columns for all small / mobile widths */
+@media (min-width: 550px) {
+  .gc-social-grid {
+    margin-top: 20px;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+/* tablet: still 2 columns, just adjust spacing */
+@media (min-width: 768px) {
+  .gc-social-grid {
+    margin-top: 40px;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+/* desktop: 4 in a row */
+@media (min-width: 1024px) {
+  .gc-social-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+
+.gc-social-card {
+  width: 100%;
+  max-width: 190px;
+  padding: 16px 18px;
+  border-radius: 18px;
+  border: 1px solid #e5e7eb;
+  background-color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.gc-social-card:hover {
+  box-shadow: 0 14px 40px rgba(15, 35, 52, 0.12);
+  transform: translateY(-2px);
+}
+
+.gc-social-logo {
+  width: 46px;
+  height: 46px;
+  position: relative;
+  flex-shrink: 0;
+}
+
+.gc-social-logo img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: contain;
+}
+
+.gc-social-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 14px;
+  border-radius: 10px;
+  font-size: 13px;
+  font-weight: 500;
+  text-decoration: none;
+  color: #ffffff;
+  min-width: 90px;
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.16);
+  transition: opacity 0.18s ease, transform 0.18s ease;
+}
+
+.gc-social-card:hover .gc-social-btn {
+  opacity: 0.9;
+  transform: translateY(-1px);
+}
+
+.gc-social-linkedin .gc-social-btn {
+  background: #0a66c2;
+}
+
+.gc-social-instagram .gc-social-btn {
+  background: linear-gradient(45deg, #f58529, #dd2a7b, #8134af);
+}
+
+.gc-social-youtube .gc-social-btn {
+  background: #ff0000;
+}
+
+.gc-social-whatsapp .gc-social-btn {
+  background: #25d366;
+}
+
+/* Extra mobile tuning so the whole block matches your screenshot */
+@media (max-width: 767px) {
+  .ocean-community {
+    padding: 60px 20px 70px;
+  }
+
+  .gc-header {
+    margin: 0 auto 24px;
+  }
+
+  .gc-social-grid {
+    margin-top: 28px;
+  }
+  .gc-social-card {
+     width: 100%;
+    max-width: 150px;
+    padding: 14px 16x;
+    border-radius: 18px;
+  }
+  .gc-social-logo {
+  width: 36px;
+  height: 36px;
+  position: relative;
+  flex-shrink: 0;
+}
+.gc-social-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 14px;
+  border-radius: 10px;
+  font-size: 13px;
+  font-weight: 500;
+  min-width: 70px;
+}
+}
