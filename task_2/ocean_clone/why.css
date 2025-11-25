@@ -211,9 +211,10 @@
 
 /* ========== WHY & MORE MEDIA QUERIES ========== */
 
-/* 1000px down -> 2 cards, 3rd centered */
-@media(max-width:1000px){
-  .why-inner{padding:0 48px}
+/* 651px–1000px → 2 cards on first row, 3rd centered below,
+   all cards keep the SAME size (same max-width) */
+@media (max-width:1000px) and (min-width:651px){
+  .why-inner{padding:0 48px;}
   .why-cards{
     grid-template-columns:repeat(2,minmax(220px,1fr));
     gap:24px;
@@ -224,19 +225,17 @@
   }
 }
 
-/* 650px down -> single column stacked */
-@media(max-width:650px){
-  .why-inner{padding:0 20px}
+/* Below 650px → stacked cards, but SIZE stays the same
+   (same width/max-width for all 3 cards) */
+@media (max-width:650px){
+  .why-inner{padding:0 20px;}
   .why-cards{
     display:flex;
     flex-direction:column;
     gap:18px;
     align-items:center;
   }
-  .why-card{
-    max-width:720px;
-    width:100%;
-  }
+  /* .why-card stays with max-width:360px from the base rule */
 }
 
 /* Large desktops 1100px+ -> 4 cols */
