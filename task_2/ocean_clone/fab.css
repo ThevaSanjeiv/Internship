@@ -1,0 +1,102 @@
+/* === Floating buttons container === */
+.fab-wrapper {
+  position: fixed;
+  right: 1.5rem;          /* ≈ 24px */
+  top: 70%;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  z-index: 50;
+}
+
+/* Each item (button + label) */
+.fab-item {
+  position: relative;
+}
+
+/* Hover label */
+.fab-label {
+  position: absolute;
+  top: 50%;
+  right: 100%;
+  transform: translate(0, -50%);
+  font-size: 14px;
+  color: #0088ff;
+  padding: 2px 6px;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+/* Slide label in on hover */
+.fab-item:hover .fab-label {
+  opacity: 1;
+  transform: translate(-10px, -50%);
+}
+
+/* Button base style */
+.fab-btn {
+  width: 48px;
+  height: 48px;
+  border-radius: 999px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 25px 5px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  transition: transform 0.2s ease;
+  bottom:20px;
+}
+
+.fab-btn:hover {
+  transform: scale(1.05);
+}
+
+/* Colors */
+.fab-whatsapp {
+  background-color: #289133;
+}
+
+.fab-primary {
+  background-color: #0088ff;
+}
+
+/* Icon style */
+.fab-icon {
+  width: 1.5rem;
+  height: 1.5rem;
+  color: #ffffff;
+}
+
+/* === Chatbot button (bottom right) === */
+.chatbot-wrapper {
+  position: fixed;
+  right: 1rem;
+  bottom: 2rem;
+  z-index: 50;
+}
+
+.chatbot-btn {
+  width: 65px;
+  height: 65px;
+  border-radius: 999px;
+  border: none;
+  background: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.chatbot-btn img {
+  width: 65px;
+  height: 49px;
+  padding: 0;
+}
+
+.chatbot-btn:hover {
+  transform: scale(0.9);
+}
