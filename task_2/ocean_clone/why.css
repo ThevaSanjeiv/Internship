@@ -211,8 +211,8 @@
 
 /* ========== WHY & MORE MEDIA QUERIES ========== */
 
-/* tablets 950px down */
-@media(max-width:950px){
+/* 1000px down -> 2 cards, 3rd centered */
+@media(max-width:1000px){
   .why-inner{padding:0 48px}
   .why-cards{
     grid-template-columns:repeat(2,minmax(220px,1fr));
@@ -224,8 +224,8 @@
   }
 }
 
-/* 850px down (why-area only; hero/nav handled in hero.css) */
-@media(max-width:850px){
+/* 650px down -> single column stacked */
+@media(max-width:650px){
   .why-inner{padding:0 20px}
   .why-cards{
     display:flex;
