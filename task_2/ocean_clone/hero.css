@@ -295,7 +295,7 @@ body {
 .drawer-dropdown.open .drawer-sub {
   display: block;
 }
-
+/* heroo */
 .hero {
   background: linear-gradient(180deg, var(--bg1), var(--bg2));
   padding: 24px 16px 36px;
@@ -315,12 +315,13 @@ body {
   padding: 20px 10px;
 }
 
-.title {
-  font-size: 36px;
-  line-height: 1.02;
+.titled {
+  font-size: 42px; /* Increased from 36px */
+  line-height: 1.1;
   font-weight: 600;
   margin-bottom: 18px;
 }
+
 
 .desc {
   font-size: 18px;
@@ -380,6 +381,18 @@ body {
   object-fit: cover;
   object-position: center top;
   border-radius: 12px;
+}
+
+.media-single::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0); /* no darkness initially */
+  transition: background .3s ease;
+}
+
+.media-single:hover::after {
+  background: rgba(0,0,0,0.45); /* dark layer when hovered */
 }
 
 .stats-row {
@@ -464,7 +477,7 @@ body {
     text-align: center;
   }
 
-  .title {
+  .titled{
     font-size: 40px;
   }
 
@@ -550,7 +563,7 @@ body {
     text-align: center !important;
   }
 
-  .title {
+  .titled {
     font-size: 26px !important;
   }
 
@@ -560,7 +573,7 @@ body {
 }
 
 @media(max-width:550px) {
-  .title {
+  .titled {
     font-size: 22px !important;
   }
 
