@@ -99,6 +99,64 @@ document.addEventListener('DOMContentLoaded', () => {
   })()
 })
 
+document.addEventListener('DOMContentLoaded', function () {
+    const dropdown = document.querySelector('.dropdown');
+    const dropToggle = document.querySelector('.drop-toggle');
+    const navToggle = document.getElementById('nav-toggle');
+    const drawer = document.getElementById('drawer');
+    const drawerClose = document.getElementById('drawer-close');
+    const drawerDrop = document.querySelector('.drawer-dropdown');
+    const drawerDropToggle = document.querySelector('.drawer-drop-toggle');
+
+    if (dropToggle && dropdown) {
+      dropToggle.addEventListener('click', () => {
+        dropdown.classList.toggle('open');
+      });
+    }
+
+    if (navToggle && drawer) {
+      navToggle.addEventListener('click', () => {
+        drawer.classList.add('open');
+      });
+    }
+
+    if (drawerClose && drawer) {
+      drawerClose.addEventListener('click', () => {
+        drawer.classList.remove('open');
+      });
+    }
+
+    if (drawerDrop && drawerDropToggle) {
+      drawerDropToggle.addEventListener('click', () => {
+        drawerDrop.classList.toggle('open');
+      });
+    }
+
+    // VIDEO PLAY LOGIC
+    const mediaSingle = document.getElementById('heroVideo');
+    const playBtn = mediaSingle.querySelector('.play-btn');
+    const video = mediaSingle.querySelector('.video-el');
+    const thumb = mediaSingle.querySelector('.video-thumb');
+
+    function startVideo() {
+      thumb.style.display = 'none';
+      playBtn.style.display = 'none';
+      video.style.display = 'block';
+      video.play();
+    }
+
+    playBtn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      startVideo();
+    });
+
+    mediaSingle.addEventListener('click', () => {
+      if (playBtn.style.display !== 'none') {
+        startVideo();
+      }
+    });
+  });
+
 // script.js
 // document.addEventListener('DOMContentLoaded', function(){
 //   var desktopPills = Array.from(document.querySelectorAll('.course-filters .course-pill'));
