@@ -1,4 +1,4 @@
-/* === Floating buttons container === */
+
 .fab-wrapper {
   position: fixed;
   right: 1.5rem;          /* ≈ 24px */
@@ -9,13 +9,10 @@
   gap: 18px;
   z-index: 50;
 }
-
-/* Each item (button + label) */
 .fab-item {
   position: relative;
 }
 
-/* Hover label */
 .fab-label {
   position: absolute;
   top: 50%;

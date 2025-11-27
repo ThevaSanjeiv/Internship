@@ -25,7 +25,6 @@
   animation: clients-scroll 30s linear infinite;
 }
 
-/* Identity for logos */
 .client-logo {
   display:block;
   width:90px;
@@ -38,7 +37,6 @@
   opacity: 0.98;
 }
 
-/* Reverse scroll direction */
 .reverse-scroll {
   animation: clients-scroll-reverse 30s linear infinite;
 }
@@ -49,7 +47,6 @@
 }
 
 
-/* reduce motion preference */
 @media (prefers-reduced-motion: reduce) {
   .clients-track { animation: none; transform: none; }
 }
@@ -64,7 +61,6 @@
   .clients-track { gap: 28px; padding: 0 20px; animation-duration: 40s; }
 }
 
-/* animation: move left by 50% (we duplicated the content, so -50% loops seamlessly) */
 @keyframes clients-scroll {
   from { transform: translateX(0); }
   to   { transform: translateX(-50%); }

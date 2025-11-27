@@ -86,7 +86,7 @@
         <li><a href="#">Gallery</a></li>
         <li><a href="#">Courses</a></li>
         <li><a href="#">Contact Us</a></li>
-        <li><a href="#">Login</a></li>
+        <li><a href="#"class="login">Login</a></li>
       </ul>
     </div>
   </nav>
@@ -97,7 +97,7 @@
     <div class="wrap">
       <div class="left">
         <h1 class="titled">Transforming Careers with Future-Ready Skills</h1>
-        <p class="desc">
+        <p class="descd">
           Upgrade your career with industry-recognized online and offline courses in Puducherry.
           Learn from expert mentors, build real-world projects, and land your dream job in IT and software development.
         </p>
@@ -259,7 +259,7 @@
 </section>
 
 <section class="plus-more">
-  <img
+   <img
     src="https://oceanacademy.in/_next/static/media/dot_pattern.2908d689.png"
     alt=""
     class="plus-bg"
@@ -325,58 +325,60 @@
 
 
 <section class="courses-section">
-    <div class="courses-inner">
-      <div class="courses-head">
-        <h2>Explore Our Courses</h2>
-        <a class="btn-view" href="#">View More</a>
-      </div>
+  <div class="courses-inner">
+    <div class="courses-head">
+      <h2>Explore Our Courses</h2>
+      <a class="btn-view" href="#">View More</a>
+    </div>
 
-      <div class="course-filters" role="tablist" aria-label="course categories">
-        <button class="course-pill active" type="button" data-key="All">All</button>
-        <button class="course-pill" type="button" data-key="Most popular">Most popular</button>
-        <button class="course-pill" type="button" data-key="Fullstack">Fullstack</button>
-        <button class="course-pill" type="button" data-key="Frontend">Frontend</button>
-        <button class="course-pill" type="button" data-key="Designing">Designing</button>
-        <button class="course-pill" type="button" data-key="Programming Foundation">Programming Foundation</button>
-        <button class="course-pill" type="button" data-key="Data, AI & Cloud">Data, AI & Cloud</button>
-        <button class="course-pill" type="button" data-key="Testing & Automation">Testing & Automation</button>
-        <button class="course-pill" type="button" data-key="App Development">App Development</button>
-      </div>
+    <!-- Desktop filters -->
+    <div class="course-filters" role="tablist" aria-label="course categories">
+      <button class="course-pill active" type="button" data-key="All">All</button>
+      <button class="course-pill" type="button" data-key="Most popular">Most popular</button>
+      <button class="course-pill" type="button" data-key="Fullstack">Fullstack</button>
+      <button class="course-pill" type="button" data-key="Frontend">Frontend</button>
+      <button class="course-pill" type="button" data-key="Designing">Designing</button>
+      <button class="course-pill" type="button" data-key="Programming Foundation">Programming Foundation</button>
+      <button class="course-pill" type="button" data-key="Data, AI & Cloud">Data, AI & Cloud</button>
+      <button class="course-pill" type="button" data-key="Testing & Automation">Testing & Automation</button>
+      <button class="course-pill" type="button" data-key="App Development">App Development</button>
+    </div>
 
-      <div class="mobile-controls">
-        <button class="filters-toggle" aria-expanded="false" aria-controls="mobile-dropdown">
-          <span class="toggle-label">All</span>
-          <span class="chev">▾</span>
-        </button>
+    <div class="mobile-controls">
+      <button class="filters-toggle" aria-expanded="false" aria-controls="mobile-dropdown">
+        <span class="toggle-label">All</span>
+        <span class="chev">▾</span>
+      </button>
 
-        <div id="mobile-dropdown" class="mobile-dropdown" aria-hidden="true">
-          <div class="mobile-list" role="menu" aria-label="mobile category list">
-            <button class="mobile-item active" role="menuitem" data-key="All" type="button">All</button>
-            <button class="mobile-item" role="menuitem" data-key="Most popular" type="button">Most popular</button>
-            <button class="mobile-item" role="menuitem" data-key="Fullstack" type="button">Fullstack</button>
-            <button class="mobile-item" role="menuitem" data-key="Frontend" type="button">Frontend</button>
-            <button class="mobile-item" role="menuitem" data-key="Designing" type="button">Designing</button>
-            <button class="mobile-item" role="menuitem" data-key="Programming Foundation" type="button">Programming Foundation</button>
-            <button class="mobile-item" role="menuitem" data-key="Data, AI & Cloud" type="button">Data, AI & Cloud</button>
-            <button class="mobile-item" role="menuitem" data-key="Testing & Automation" type="button">Testing & Automation</button>
-            <button class="mobile-item" role="menuitem" data-key="App Development" type="button">App Development</button>
-          </div>
+      <div id="mobile-dropdown" class="mobile-dropdown" aria-hidden="true">
+        <div class="mobile-list" role="menu" aria-label="mobile category list">
+          <button class="mobile-item active" role="menuitem" data-key="All" type="button">All</button>
+          <button class="mobile-item" role="menuitem" data-key="Most popular" type="button">Most popular</button>
+          <button class="mobile-item" role="menuitem" data-key="Fullstack" type="button">Fullstack</button>
+          <button class="mobile-item" role="menuitem" data-key="Frontend" type="button">Frontend</button>
+          <button class="mobile-item" role="menuitem" data-key="Designing" type="button">Designing</button>
+          <button class="mobile-item" role="menuitem" data-key="Programming Foundation" type="button">Programming Foundation</button>
+          <button class="mobile-item" role="menuitem" data-key="Data, AI & Cloud" type="button">Data, AI & Cloud</button>
+          <button class="mobile-item" role="menuitem" data-key="Testing & Automation" type="button">Testing & Automation</button>
+          <button class="mobile-item" role="menuitem" data-key="App Development" type="button">App Development</button>
         </div>
       </div>
-
-<div class="courses-carousel-wrap">
-  <div class="courses-carousel" aria-live="polite">
-    <div class="cards-track"></div>
-  </div>
-
-  <div class="carousel-controls" aria-hidden="false">
-    <button class="ctrl prev" aria-label="Previous"><span>‹</span></button>
-    <button class="ctrl next" aria-label="Next"><span>›</span></button>
-  </div>
-</div>
-
     </div>
-  </section>
+
+    <!-- Carousel -->
+    <div class="courses-carousel-wrap">
+      <div class="courses-carousel" aria-live="polite">
+        <div class="cards-track"></div>
+      </div>
+
+      <div class="carousel-controls" aria-hidden="false">
+        <button class="ctrl prev" aria-label="Previous"><span>‹</span></button>
+        <button class="ctrl next" aria-label="Next"><span>›</span></button>
+      </div>
+    </div>
+  </div>
+</section>
+
 
 <section class="awards-section">
   <div class="container">
