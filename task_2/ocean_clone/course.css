@@ -163,24 +163,27 @@ body{
 }
 .cards-track{
   display:flex;
-  gap:32px;
+  gap:40px;
   transition:transform 400ms cubic-bezier(.22,.9,.35,1);
   will-change:transform;
   padding-bottom:4px;
-  /* margin-left: 0; */
 }
 
 
 .course-card{
   background:white;
   border-radius:18px;
-   box-shadow:0 4px 12px rgba(13,30,41,0.05);
+  box-shadow:4px 4px 45px rgba(13,30,41,0.05);
   width:340px;
   flex:0 0 340px;
   display:flex;
   flex-direction:column;
   padding:12px 14px 14px;
   overflow:visible;
+}
+.course-card:hover{
+  /* transform: translateY(-1px); */
+   box-shadow:0 -8px 12px rgba(13,30,41,0.05);
 }
 
 .course-card .card-top{
@@ -236,7 +239,7 @@ body{
 }
 .badge:hover{
   color:white;
-  background:#3c8eda;
+  background:#0789ff;
   transition:0.3s ease;
 }
 .badge.more-badge{
@@ -286,7 +289,7 @@ body{
   background:linear-gradient(180deg,#00aaff,#00b8ff);
   color:white;
   border:none;
-  padding:16px 100px;          /* increased height */
+  padding:12px 100px;          /* increased height */
   border-radius:12px;
   font-family:inherit;
   cursor:pointer;
@@ -297,6 +300,10 @@ body{
   display:flex;
   align-items:center;
   justify-content:center;
+}
+.enroll-btn:hover{
+  background:  #004b66;
+  transition: .2s ease;
 }
 
 
