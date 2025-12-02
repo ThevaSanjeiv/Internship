@@ -36,3 +36,19 @@ def sum_nodes(root):
     return total
 
 print(sum_nodes(root))
+
+def dfs(root, target):
+    if root is None:
+        return False
+
+    if root.data == target: 
+        print("Found:", target)
+        return True
+
+    for child in root.children:
+        if dfs(child, target):  
+            return True
+
+    return False
+
+dfs(root,8)
