@@ -9,7 +9,7 @@ public class Two_sum{
             if(sum==target){
                 System.out.println("[" + arr[left] + ", " +arr[right] + "]");
                 left ++;
-                right++;
+                right--;
             }else if(sum>target){
                 right--;
             }else{

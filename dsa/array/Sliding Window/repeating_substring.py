@@ -1,4 +1,4 @@
-s="bbbb"
+s="abcabcbbbb"
 l=0
 longest=0
 sett=set()

@@ -1,0 +1,17 @@
+arr=[1,2,5,8,10]
+k=14
+l=0
+max_length=0
+summ=0
+n=len(arr)
+r=0
+while(r<n):
+    summ+=arr[r]
+    while(summ>k):
+        summ-=arr[l]
+        l+=1
+    w=(r-l)+1
+    if(summ<=k):
+        max_length=max(max_length,w)
+    r+=1
+print(max_length)
