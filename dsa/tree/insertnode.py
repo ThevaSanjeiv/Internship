@@ -19,14 +19,14 @@ class Node:
 
 
 # bst 
-# def insert(root,data):
-#     if root is None:
-#         return Node(data)
-#     if data < root.data:
-#         root.left=insert(root.left,data)
-#     else:
-#         root.right=insert(root.right,data)
-#     return root
+def insert(root,data):
+    if root is None:
+        return Node(data)
+    if data < root.data:
+        root.left=insert(root.left,data)
+    else:
+        root.right=insert(root.right,data)
+    return root
 root=None
 a=[40,50,20,30,80,15]
 for i in a:
