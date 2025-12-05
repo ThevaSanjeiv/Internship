@@ -23,7 +23,6 @@ def dijkstra(V, adj, S):
     return dist
 
 
-# Example usage:
 # Graph:
 # 0 -> (1,4), (2,7)
 # 1 -> (2,1), (3,5)
