@@ -36,4 +36,4 @@ adj = [
     []
 ]
 
-print(dijkstra(V, adj, 0))  # Output: [0, 4, 5, 7]
+print(dijkstra(V, adj, 0)) 
