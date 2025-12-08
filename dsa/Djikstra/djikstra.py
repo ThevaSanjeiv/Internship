@@ -30,11 +30,13 @@ def dijkstra(V, adj, S):
 # 3 -> []
 V = 4
 adj = [
-    [(1, 4), (2, 1)],   # edges going out from node 0 → 1, 0 → 2
-    [(3, 1)],           # edge 1 → 3
-    [(1, 2), (3, 5)],   # edges 2 → 1, 2 → 3
-    []                  # node 3 has no outgoing edges
+    [[1, 4], [2, 7]],  # node 0
+    [[2, 1], [3, 5]],  # node 1
+    [[3, 2]],          # node 2
+    []                 # node 3
 ]
+
+
 
 
 
