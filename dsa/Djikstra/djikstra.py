@@ -5,7 +5,6 @@ def dijkstra(V, adj, S):
     dist = [INF] * V
     dist[S] = 0
 
-    # Min-heap: (distance, node)
     pq = [(0, S)]
 
     while pq:
