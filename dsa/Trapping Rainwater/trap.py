@@ -6,13 +6,13 @@ prefix[0]=arr[0]
 suffix[n-1]=arr[n-1]
 for i in range(1,n):
     prefix[i]=max(prefix[i-1],arr[i])
-for i in range(n-2,0,-1):
+for i in range(n-2,-1,-1):
     suffix[i]=max(suffix[i+1],arr[i])
-# print(prefix)
-# print(suffix)
+
 total=0
+leftmax=arr[i]
 for i in range(n):
-    leftmax=prefix[i]
+    leftmax=max(arr[i],leftmax)
     rightmax=suffix[i]
     if(arr[i]<leftmax and arr[i]<rightmax):
         total=total+min(leftmax,rightmax)-arr[i]
