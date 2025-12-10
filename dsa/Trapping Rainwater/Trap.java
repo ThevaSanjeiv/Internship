@@ -10,7 +10,7 @@ public class Trap {
         for(int i=1;i<n;i++){
             prefix[i]=Math.max(prefix[i-1],arr[i]);
         }
-        for(int i=n-2;i<-1;i--){
+        for(int i=n-2;i>-1;i--){
             suffix[i]=Math.max(suffix[i+1],arr[i]);
         }
         int total=0;
