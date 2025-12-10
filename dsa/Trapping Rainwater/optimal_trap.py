@@ -1,19 +1,19 @@
-arr=[0,1,0,2,1,0,1,3,2,1,2,1]
-n=len(arr)
-leftmax,rightmax,total=0,0,0
+height=[0,1,0,2,1,0,1,3,2,1,2,1]
+n=len(height)
+leftmax,rightmax,waterUnits=0,0,0
 l=0
 r=n-1
 while(l<r):
-    if(arr[l]<=arr[r]):
-        if(leftmax>arr[l]):
-            total+=leftmax-arr[l]
+    if(height[l]<=height[r]):
+        if(leftmax>height[l]):
+            waterUnits+=leftmax-height[l]
         else:
-            leftmax=arr[l]
+            leftmax=height[l]
         l+=1
     else:
-        if(rightmax>arr[r]):
-            total+=rightmax-arr[r]
+        if(rightmax>height[r]):
+            waterUnits+=rightmax-height[r]
         else:
-            rightmax=arr[r]
+            rightmax=height[r]
         r-=1
-print(total," units")
+print(waterUnits," units")
