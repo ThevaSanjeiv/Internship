@@ -17,8 +17,6 @@ public class NextGreaterElement {
             } else {
                 nge[i] = stack.peek();
             }
-
-            // Push current element
             stack.push(arr[i]);
         }
 
